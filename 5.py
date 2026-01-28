@@ -38,6 +38,4 @@ def get_int():
         except:
             pass
 
-main()
-    
-    
+main()    
