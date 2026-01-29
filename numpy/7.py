@@ -19,3 +19,5 @@ print(np.min(a))
 print(np.max(a))
 print(np.mean(a))
 print(np.std(a))
+
+
