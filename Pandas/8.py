@@ -37,15 +37,36 @@ df = pd.read_csv("Pandas/titanic.csv")
 # print(f"Number of null values in Age column in filled CSV: {fdf['Age'].isnull().sum()}")
 # print(f"Number of null values in Age column in original CSV: {df['Age'].isnull().sum()}")
 
-df['Embarked'] = df['Embarked'].fillna(df['Embarked'].mode()[0])
-df.drop(columns=['Cabin'], inplace=True)
+# df['Embarked'] = df['Embarked'].fillna(df['Embarked'].mode()[0])
+# df.drop(columns=['Cabin'], inplace=True)
 
-print(df['Embarked'].isnull().sum())
+# print(df['Embarked'].isnull().sum())
 
-df.rename(columns={'Sex':'Gender'}, inplace=True)  
+# df.rename(columns={'Sex':'Gender'}, inplace=True)  
 
 
 
-df['Gender'] = df['Gender'].replace('male', 'M')
+# df['Gender'] = df['Gender'].replace('male', 'M')
 
-print(df['Gender'])
+# print(df['Gender'])
+
+
+
+sealions = pd.DataFrame({
+    "id": [10484,11728,11729,11732,11734,11790],
+    "name": ['Ayah','Spot','Tiger','Mabel','Rick','Jolee']
+})
+
+migrations = pd.DataFrame({
+    "id": [10484,11728,11729,11732,11734,11735,11736,11737],
+    "distance": [1000,1531,1370,1622,1491,2723,1571,1957],
+    "days": [107,56,37,62,58,82,52,92]
+})
+
+# print(sealions)
+# print(migrations)
+
+print("\n Inner join\n", sealions.merge(migrations, on="id", how="inner"))
+print("\nLeft join\n", sealions.merge(migrations, on="id", how="left"))
+print("\n Right join\n", sealions.merge(migrations, on="id", how="right"))
+print("\n Outer join\n", sealions.merge(migrations, on="id", how="outer"))
