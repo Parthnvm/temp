@@ -1,0 +1,11 @@
+id,name,age,gender,course,marks
+1,Aarav,20,Male,Python,85
+2,Diya,19,Female,Data Science,92
+3,Rohan,21,Male,Web Development,78
+4,Ananya,20,Female,AI,88
+5,Kabir,22,Male,Machine Learning,90
+6,Isha,19,Female,Python,81
+7,Arjun,21,Male,Data Science,75
+8,Meera,20,Female,Web Development,84
+9,Neel,22,Male,AI,89
+10,Priya,19,Female,Machine Learning,91
