@@ -23,6 +23,29 @@ s1 = pd.Series([10,20,30,40,50,60,70,80,90,100])
 
 
 # print(df[['name','age']])
+exc= pd.read_excel("Pandas/adult.xlsx")
+# print(exc.head(5))
 
-df = pd.read_csv("Pandas/temp.csv")
-print(df.head())
+df = pd.read_csv("Pandas/titanic.csv")
+# print(df.head())
+
+# df.info()
+
+# df['Age'] = df['Age'].fillna(df['Age'].mean())
+# df.to_csv("titanic_filled.csv")
+# fdf = pd.read_csv("titanic_filled.csv")
+# print(f"Number of null values in Age column in filled CSV: {fdf['Age'].isnull().sum()}")
+# print(f"Number of null values in Age column in original CSV: {df['Age'].isnull().sum()}")
+
+df['Embarked'] = df['Embarked'].fillna(df['Embarked'].mode()[0])
+df.drop(columns=['Cabin'], inplace=True)
+
+print(df['Embarked'].isnull().sum())
+
+df.rename(columns={'Sex':'Gender'}, inplace=True)  
+
+
+
+df['Gender'] = df['Gender'].replace('male', 'M')
+
+print(df['Gender'])
