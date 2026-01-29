@@ -9,4 +9,4 @@ tips = sns.load_dataset('tips')
 
 
 sns.barplot(x="day",data = tips,hue="smoker",palette="Set2")
-plt.show()
+plt.show()  
